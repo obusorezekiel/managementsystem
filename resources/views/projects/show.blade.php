@@ -99,7 +99,7 @@
                 <h4>Add Members</h4>
 
               <div class="col-lg-12 col-md-12 col-sm-12">
-                  <form id="add-user" action="{{ route('projects.adduser',[$project->id]) }}" method="POST">
+                  <form id="add-user" action="projects/adduser" method="POST">
 
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Email..."/>

@@ -31,7 +31,7 @@ Route::resource('comments', 'CommentsController');
 
 Route::get('projects/create/{company_id?}', 'ProjectsController@create');
 
-Route::get('projects/adduser/{project_id?}', 'ProjectsController@creataddUser');
+Route::post('projects/adduser', 'ProjectsController@addUser')->name('projects.adduser');
 
 Route::resource('roles', 'RolesController');
 Route::resource('tasks', 'TasksController');
