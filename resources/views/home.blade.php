@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    You are logged in!<br/><br/>
+                    <a href="/companies/" class="btn btn-primary">View My Companies</a>
                 </div>
             </div>
         </div>
