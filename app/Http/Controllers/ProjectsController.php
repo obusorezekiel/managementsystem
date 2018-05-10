@@ -24,6 +24,10 @@ class ProjectsController extends Controller
        
     }
 
+    public function addUser(){
+        
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -77,7 +81,9 @@ class ProjectsController extends Controller
     {
         //
         $project = Project::find($project->id);
-        return view('projects.show', ['project'=>$project]);
+
+        $comments = $project->comments;
+        return view('projects.show', ['project'=>$project, 'comments'=>$comments]);
     }
 
     /**

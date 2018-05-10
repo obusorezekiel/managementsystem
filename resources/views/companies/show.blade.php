@@ -11,7 +11,6 @@
       <div class="jumbotron">
       <h1>{{$company->name}}</h1>
       <p class="lead">{{$company->description}}</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>
       </div>
 
       <!-- Example row of columns -->

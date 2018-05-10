@@ -42,50 +42,9 @@
         </form>
       </div>
 
-      
-        <div class="panel panel-default widget">
-            <div class="panel-heading">
-                <span class="glyphicon glyphicon-comment"></span>
-                <h3 class="panel-title">
-                    Recent Comments</h3>
-            </div>
-            @foreach($project->comments as $comment)            
-            <div class="panel-body">
-                <ul class="list-group">
-                    
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-xs-2 col-md-1">
-                                <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
-                            <div class="col-xs-10 col-md-11">
-                                <div>
-                                    <a href="http://bootsnipp.com/BhaumikPatel/snippets/4ldn">{{$comment->body}}</a>
-                                    <div class="mic-info">
-                                    By: <a href="#">{{Auth::user()->name}}</a> on {{$comment->created_at}}
-                                    </div>
-                                </div>
-                                <div class="comment-text">
-                                    <b>Proof:</b> <a href="#">{{$comment->url}}</a>
-                                </div>
-                                <div class="action">
-                                    <button type="button" class="btn btn-primary btn-xs" title="Edit">
-                                        <span class="glyphicon glyphicon-pencil"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-success btn-xs" title="Approved">
-                                        <span class="glyphicon glyphicon-ok"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-danger btn-xs" title="Delete">
-                                        <span class="glyphicon glyphicon-trash"></span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>           
-               </div>
-        </div>
+      @include('partials.comments')
    
-    @endforeach
+    
 
 
 
@@ -135,6 +94,37 @@
               @endif
               <!--<li><a href="#">Add a new User</a></li>-->
             </ol>
+<hr/>
+            <div class="row">
+                <h4>Add Members</h4>
+
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                  <form id="add-user" action="{{ route('projects.adduser',[$project->id]) }}" method="POST">
+
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Email..."/>
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit">Add</button>
+                </span>
+              </div>
+                  </form>
+            </div>
+            </div>
+            <br/>
+
+            <h4>Team Members</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">Me</a></li>
+              <li><a href="#">You</a></li>
+              <li><a href="#">Every other Person</a></li>
+
+            </ol>
+
+
+
+
+
+
           </div>
       </div>
     
